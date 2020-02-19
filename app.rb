@@ -30,9 +30,11 @@ class App < Sinatra::Base
      @word3 = params[:word3]
      @word4 = params[:word4]
      @word5 = params[:word5]
-     #binding.pry
      
-     erb :join_words     
+     
+     
+     
+       
 
   end 
   
