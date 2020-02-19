@@ -10,17 +10,15 @@ class App < Sinatra::Base
   
   get '/square/:number' do
     @number = params[:number].to_i**2
-    #binding.pry
     @number.to_s
   end 
   
   get '/say/:number/:phrase' do 
-    @x_times = params[:number]
+    @number = params[:number].to_i
     @phrase = params[:phrase]
     #binding.pry
-    "#{params[:phrase]}\n#{params[:phrase]}\n#{params[:phrase]}\n"
     
-    params[:number].to_i.times { puts params[:phrase].to_s } 
+    @number.times { @phrase.to_s } 
     
     this = ["#{params[:phrase]} /n"] * params[:number].to_i
     "#{this}"
