@@ -4,8 +4,8 @@ class App < Sinatra::Base
   # Write your code here!
   
   get '/reversename/:name' do
-    #@name = params[:name]
-    "#{params[:name].reverse}"
+    @name = params[:name]
+    "#{@name.reverse}"
   end
   
   get '/square/:number' do
@@ -17,7 +17,7 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do 
     @x_times = params[:number]
     @phrase = params[:phrase]
-    binding.pry
+    #binding.pry
     "#{params[:phrase]}\n#{params[:phrase]}\n#{params[:phrase]}\n"
     
     params[:number].to_i.times { puts params[:phrase].to_s } 
