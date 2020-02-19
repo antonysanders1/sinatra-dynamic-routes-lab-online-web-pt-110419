@@ -20,7 +20,7 @@ class App < Sinatra::Base
     binding.pry
     "#{params[:phrase]}\n#{params[:phrase]}\n#{params[:phrase]}\n"
     
-    params[:number].to_i.times { puts params[:phrase] } 
+    params[:number].to_i.times { puts params[:phrase].to_s } 
     
     #this = ["#{params[:phrase]} /n"] * params[:number].to_i
     #"#{this}"
